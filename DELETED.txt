@@ -1,3 +1,0 @@
-Bayan Option 2 v177 - delete these files from your copy:
-img/bg-anim-dark.mp4
-img/bg-anim-light.mp4
