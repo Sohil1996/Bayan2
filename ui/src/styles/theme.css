@@ -1,0 +1,291 @@
+/*
+ * Bayan design tokens + Tailwind v4 theme.
+ *
+ * Values are measured from the live Bayan app (bayan2.vercel.app).
+ * Theme:      <html data-theme="dark|light">   (dark is the default)
+ * Direction:  <html dir="rtl" lang="ar">        (Arabic switches the font to Cairo)
+ *
+ * Apps that use Tailwind v4 can import this file directly:
+ *   @import "tailwindcss";
+ *   @import "@bayan/ui/theme.css";
+ *   @source "../node_modules/@bayan/ui/dist";
+ */
+
+/* ------------------------------------------------------------------ raw tokens */
+:root {
+  --by-font-sans: 'Inter Variable', Inter, system-ui, sans-serif;
+  --by-font-display: Canela, 'Canela Text', 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+}
+
+:root,
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  /* surfaces */
+  --by-bg: #070911;
+  --by-bg-raised: #0b0e16;
+  --by-scrim: rgb(5 6 10 / 0.6);
+
+  /* text */
+  --by-fg: #ebedf2;
+  --by-fg-strong: #ffffff;
+  --by-fg-muted: rgb(255 255 255 / 0.82);
+  --by-fg-subtle: rgb(255 255 255 / 0.5);
+  --by-line: rgb(255 255 255 / 0.14);
+  --by-line-soft: rgb(255 255 255 / 0.09);
+
+  /* brand */
+  --by-gold: #ebc17a;
+  --by-gold-strong: #c39241;
+  --by-gold-soft: #f2d59e;
+  --by-gold-ink: #d0aa68; /* gold text on the background */
+  --by-blue: #5eafe5;
+  --by-navy: #1e294b;
+  --by-danger: #f0857a;
+
+  /* primary action (send, sign in) */
+  --by-primary: var(--by-gold);
+  --by-primary-fg: #0e1220;
+  --by-primary-shadow: 0 4px 14px rgb(235 193 122 / 0.35);
+
+  /* glass: chips, icon buttons, inputs, dock */
+  --by-glass-bg: linear-gradient(135deg, rgb(255 255 255 / 0.12) 0%, rgb(255 255 255 / 0.024) 38%, rgb(255 255 255 / 0.04) 62%, rgb(255 255 255 / 0.11) 100%);
+  --by-glass-border: rgb(255 255 255 / 0.09);
+  --by-glass-shadow: inset 0 1px 0 rgb(255 255 255 / 0.16), 0 8px 26px rgb(0 0 0 / 0.3);
+  --by-glass-blur: blur(16px) saturate(2);
+
+  /* card: list items, recommendation cards, column cards */
+  --by-card-bg: linear-gradient(180deg, rgb(255 255 255 / 0.05), rgb(255 255 255 / 0.016));
+  --by-card-border: rgb(242 213 158 / 0.22);
+
+  /* panel: sign-in card, dialogs */
+  --by-panel-bg: linear-gradient(135deg, rgb(255 255 255 / 0.08), rgb(255 255 255 / 0.02));
+  --by-panel-border: rgb(255 255 255 / 0.1);
+  --by-panel-shadow: inset 0 1px 0 rgb(255 255 255 / 0.16), 0 30px 80px rgb(0 0 0 / 0.45);
+  --by-panel-blur: blur(22px) saturate(1.5);
+  --by-dialog-bg: rgb(13 16 26 / 0.96);
+
+  /* assistant message */
+  --by-bubble-bg: linear-gradient(135deg, rgb(255 255 255 / 0.06), rgb(255 255 255 / 0.01) 55%, rgb(255 255 255 / 0.035));
+  --by-bubble-fg: var(--by-fg);
+  --by-bubble-border: rgb(255 255 255 / 0.08);
+  --by-bubble-shadow: inset 0 1px 0 rgb(255 255 255 / 0.12), 0 8px 26px rgb(0 0 0 / 0.18);
+
+  /* selected tab / segmented option */
+  --by-tab-on-bg: linear-gradient(180deg, rgb(197 147 67 / 0.55), rgb(139 103 47 / 0.45));
+  --by-tab-on-border: #eabb6a;
+  --by-tab-on-shadow: 0 0 24px rgb(228 169 67 / 0.55), inset 0 1px 0 rgb(214 220 231 / 0.35), inset 0 0 18px rgb(236 193 119 / 0.25);
+  --by-tab-on-fg: #ffffff;
+
+  /* outlined gold action (Read summary, Change characters) */
+  --by-outline-bg: linear-gradient(180deg, rgb(21 26 40 / 0.55), rgb(13 15 24 / 0.6));
+  --by-outline-border: #e8b65e;
+  --by-outline-shadow: 0 0 0 1px rgb(241 209 154 / 0.12), 0 0 22px rgb(231 177 84 / 0.45), inset 0 0 14px rgb(231 177 84 / 0.18);
+
+  /* suggestion chip: gradient border */
+  --by-sugg-fill: rgb(17 20 32 / 0.82);
+  --by-sugg-edge: linear-gradient(100deg, rgb(94 175 229 / 0.5), rgb(236 195 125 / 0.5));
+
+  /* tags */
+  --by-tag-bg: rgb(235 193 122 / 0.14);
+  --by-tag-fg: var(--by-gold);
+
+  /* dock */
+  --by-dock-fg: var(--by-gold-soft);
+
+  /* focus */
+  --by-focus: var(--by-gold);
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+
+  --by-bg: #ebedf2;
+  --by-bg-raised: #ffffff;
+  --by-scrim: rgb(235 237 242 / 0.62);
+
+  --by-fg: #121520;
+  --by-fg-strong: #121520;
+  --by-fg-muted: rgb(18 21 32 / 0.72);
+  --by-fg-subtle: rgb(18 21 32 / 0.55);
+  --by-line: rgb(13 15 24 / 0.14);
+  --by-line-soft: rgb(18 21 32 / 0.1);
+
+  --by-gold-ink: #8f6112;
+  --by-danger: #b3261e;
+
+  --by-primary: var(--by-navy);
+  --by-primary-fg: #ffffff;
+  --by-primary-shadow: 0 4px 14px rgb(30 41 75 / 0.3);
+
+  --by-glass-bg: linear-gradient(180deg, rgb(255 255 255 / 0.74), rgb(255 255 255 / 0.46));
+  --by-glass-border: rgb(255 255 255 / 0.8);
+  --by-glass-shadow: 0 8px 30px rgb(26 33 55 / 0.14), inset 0 1px 0 rgb(255 255 255 / 0.95), inset 0 -1px 0 rgb(255 255 255 / 0.4);
+  --by-glass-blur: blur(28px) saturate(1.9);
+
+  --by-card-bg: rgb(255 255 255 / 0.55);
+  --by-card-border: rgb(30 41 75 / 0.22);
+
+  --by-panel-bg: linear-gradient(135deg, rgb(255 255 255 / 0.8), rgb(255 255 255 / 0.5));
+  --by-panel-border: rgb(255 255 255 / 0.8);
+  --by-panel-shadow: 0 30px 80px rgb(32 43 78 / 0.15);
+  --by-dialog-bg: rgb(251 251 252 / 0.98);
+
+  --by-bubble-bg: linear-gradient(135deg, rgb(237 194 121 / 0.78), rgb(230 177 85 / 0.62));
+  --by-bubble-fg: #0e1220;
+  --by-bubble-border: rgb(30 41 75 / 0.4);
+  --by-bubble-shadow: 0 8px 30px rgb(26 33 55 / 0.14), inset 0 1px 0 rgb(255 255 255 / 0.95);
+
+  --by-tab-on-bg: linear-gradient(180deg, #e3a841, #af8237);
+  --by-tab-on-border: #bd8c3b;
+  --by-tab-on-shadow: 0 4px 18px rgb(175 130 55 / 0.4);
+
+  --by-outline-bg: rgb(246 247 249 / 0.85);
+  --by-outline-border: #bd8c3b;
+  --by-outline-shadow: 0 0 18px rgb(189 140 59 / 0.35);
+
+  --by-sugg-fill: rgb(249 250 252 / 0.9);
+  --by-sugg-edge: linear-gradient(100deg, rgb(94 175 229 / 0.5), rgb(227 165 58 / 0.5));
+
+  --by-tag-bg: rgb(30 41 75 / 0.1);
+  --by-tag-fg: var(--by-navy);
+
+  --by-dock-fg: var(--by-navy);
+  --by-focus: var(--by-navy);
+}
+
+/* ------------------------------------------------------------------ variants */
+/* light:  styles for the light theme.   dark: is the default, so no variant is needed. */
+@custom-variant light (&:where([data-theme='light'], [data-theme='light'] *));
+
+/* ------------------------------------------------------------------ tailwind theme */
+@theme inline {
+  --color-bg: var(--by-bg);
+  --color-bg-raised: var(--by-bg-raised);
+  --color-scrim: var(--by-scrim);
+  --color-fg: var(--by-fg);
+  --color-fg-strong: var(--by-fg-strong);
+  --color-fg-muted: var(--by-fg-muted);
+  --color-fg-subtle: var(--by-fg-subtle);
+  --color-line: var(--by-line);
+  --color-line-soft: var(--by-line-soft);
+  --color-gold: var(--by-gold);
+  --color-gold-strong: var(--by-gold-strong);
+  --color-gold-soft: var(--by-gold-soft);
+  --color-gold-ink: var(--by-gold-ink);
+  --color-blue: var(--by-blue);
+  --color-navy: var(--by-navy);
+  --color-danger: var(--by-danger);
+  --color-primary: var(--by-primary);
+  --color-primary-fg: var(--by-primary-fg);
+  --color-bubble-fg: var(--by-bubble-fg);
+  --color-tag: var(--by-tag-bg);
+  --color-tag-fg: var(--by-tag-fg);
+  --color-dock-fg: var(--by-dock-fg);
+  --color-card-border: var(--by-card-border);
+  --color-focus: var(--by-focus);
+
+  --font-sans: var(--by-font-sans);
+  --font-display: var(--by-font-display);
+}
+
+@theme {
+  /* type scale (px values from the app) */
+  --text-2xs: 0.6875rem; /* 11   dock labels, tags */
+  --text-xs: 0.71875rem; /* 11.5 message actions */
+  --text-sm: 0.78125rem; /* 12.5 chips, captions */
+  --text-base: 0.90625rem; /* 14.5 chat text, card titles */
+  --text-md: 0.9375rem; /* 15   inputs, buttons */
+  --text-display-sm: 1.125rem; /* 18 section titles */
+  --text-display-md: 1.375rem; /* 22 column title */
+  --text-display-lg: 2.25rem; /* 36 page titles */
+  --text-display-xl: 3.87rem; /* 62 hero */
+
+  /* radii */
+  --radius-cover: 6px;
+  --radius-thumb: 10px;
+  --radius-card: 16px;
+  --radius-bubble: 26px;
+  --radius-panel: 30px;
+  --radius-column: 40px;
+
+  /* control heights */
+  --spacing-chip: 30px;
+  --spacing-control: 44px;
+  --spacing-field: 50px;
+  --spacing-composer: 56px;
+
+  --ease-out-soft: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Arabic: Cairo for everything (display included) */
+:root:lang(ar),
+[dir='rtl'] {
+  --by-font-sans: 'Cairo Variable', Cairo, system-ui, sans-serif;
+  --by-font-display: 'Cairo Variable', Cairo, system-ui, sans-serif;
+}
+
+/* ------------------------------------------------------------------ surface utilities */
+@utility glass {
+  background: var(--by-glass-bg);
+  border: 1px solid var(--by-glass-border);
+  box-shadow: var(--by-glass-shadow);
+  -webkit-backdrop-filter: var(--by-glass-blur);
+  backdrop-filter: var(--by-glass-blur);
+}
+
+@utility surface-card {
+  background: var(--by-card-bg);
+  border: 1px solid var(--by-card-border);
+}
+
+@utility surface-panel {
+  background: var(--by-panel-bg);
+  border: 1px solid var(--by-panel-border);
+  box-shadow: var(--by-panel-shadow);
+  -webkit-backdrop-filter: var(--by-panel-blur);
+  backdrop-filter: var(--by-panel-blur);
+}
+
+@utility surface-bubble {
+  background: var(--by-bubble-bg);
+  color: var(--by-bubble-fg);
+  border: 1px solid var(--by-bubble-border);
+  box-shadow: var(--by-bubble-shadow);
+  -webkit-backdrop-filter: blur(10px) saturate(1.5);
+  backdrop-filter: blur(10px) saturate(1.5);
+}
+
+@utility surface-tab-on {
+  background: var(--by-tab-on-bg);
+  border-color: var(--by-tab-on-border);
+  box-shadow: var(--by-tab-on-shadow);
+  color: var(--by-tab-on-fg);
+}
+
+@utility surface-outline-gold {
+  background: var(--by-outline-bg);
+  border: 1px solid var(--by-outline-border);
+  box-shadow: var(--by-outline-shadow);
+}
+
+@utility surface-suggestion {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--by-sugg-fill), var(--by-sugg-fill)) padding-box,
+    var(--by-sugg-edge) border-box;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+
+@utility shadow-primary {
+  box-shadow: var(--by-primary-shadow);
+}
+
+@utility focus-ring {
+  outline: 2px solid transparent;
+  &:focus-visible {
+    outline: 2px solid var(--by-focus);
+    outline-offset: 3px;
+  }
+}

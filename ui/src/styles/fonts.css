@@ -1,0 +1,12 @@
+/*
+ * Self-hosted fonts.
+ * Inter (Latin UI), Cairo (all Arabic), Cormorant Garamond (display fallback).
+ * The app's display face is Canela (commercial). If you hold a Canela licence,
+ * add its @font-face and it is picked up first by --by-font-display.
+ */
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/cairo';
+@import '@fontsource/cormorant-garamond/400.css';
+@import '@fontsource/cormorant-garamond/500.css';
+@import '@fontsource/cormorant-garamond/600.css';
+@import '@fontsource/cormorant-garamond/500-italic.css';
