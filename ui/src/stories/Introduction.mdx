@@ -1,0 +1,69 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction" />
+
+# Bayan UI
+
+The design system of **Bayan · بيان**, the AI cultural librarian, as React components styled with Tailwind CSS v4.
+Every value in here was measured from the live app at [bayan2.vercel.app](https://bayan2.vercel.app), so the components match what users see today.
+
+## Use the toolbar
+
+- **Theme**: dark (default) or light.
+- **Language**: English (left to right) or العربية (right to left). Arabic switches the font to Cairo and mirrors the layout.
+- **Backdrop**: the Bayan background image or a plain colour. Glass surfaces only make sense on the image.
+
+Check every component in all four combinations before shipping a change.
+
+## Install and set up
+
+```bash
+npm install @bayan/ui        # or link the ui/ folder of this repo
+```
+
+```tsx
+import '@bayan/ui/fonts.css';            // Inter, Cairo, Cormorant Garamond (skip if you self-host them)
+import '@bayan/ui/styles.css';           // tokens and every class the components use
+import { Button, BookCard, Composer } from '@bayan/ui';
+```
+
+On the `<html>` element, set the theme and the direction. The components read nothing else:
+
+```html
+<html data-theme="dark" dir="ltr" lang="en">   <!-- English, dark -->
+<html data-theme="light" dir="rtl" lang="ar">  <!-- Arabic, light -->
+```
+
+### If your app also uses Tailwind v4
+
+Import the theme instead of the prebuilt CSS, so you can use the same tokens in your own markup
+(`bg-bg`, `text-fg-muted`, `glass`, `surface-card`, `rounded-card`, `h-control`, `light:` …):
+
+```css
+@import 'tailwindcss';
+@import '@bayan/ui/theme.css';
+@source '../node_modules/@bayan/ui/dist';
+```
+
+## Rules the components follow (please keep them)
+
+1. **Logical properties only.** Use `ms-` `me-` `ps-` `pe-` `start-` `end-` `text-start`, never `left`/`right` margins. Arrows and chevrons mirror with `rtl:-scale-x-100`; logos and media controls (play, pause) never mirror.
+2. **Mixed-language text** uses `dir="auto"`, plus `[unicode-bidi:plaintext]` with `text-left rtl:text-right`. An Arabic title inside the English interface stays aligned with its neighbours.
+3. **Touch targets are 44px** (`h-control`). Chips are 30px, inside rows at least 44px apart.
+4. **Every icon-only button has an `aria-label`**, passed in the current language. Components accept label props in place of hard-coded English.
+5. **Book cards and media never go inside a text bubble**. Use `AssistantMessage`'s `attachments`.
+6. **One word per concept** in both languages: My Library / مكتبتي, Duo conversation / حوار ثنائي, Add to favorites / أضف إلى المفضلة.
+7. **Respect `prefers-reduced-motion`**. The base styles already shorten animations.
+
+## What is where
+
+| Section | Contents |
+|---|---|
+| Foundations | Colours, surfaces, type scale, radii |
+| Primitives | Button, IconButton, Chip, SuggestionChip, Tag |
+| Forms | TextField, SearchBar, Composer, Checkbox, Switch, SegmentedControl |
+| Navigation | Dock, AppHeader |
+| Content | ListItem, BookCard, BookCover, Tabs, SectionHeader, Wordmark, Avatar, Timeline, CreditMeter, Card |
+| Chat | AssistantMessage, UserMessage, MessageActions, TypingIndicator, SuggestionRow |
+| Feedback | Dialog, Toast |
+| Patterns | Home, Book chat, General chat, Duo column, Sign in, built only from the components above |

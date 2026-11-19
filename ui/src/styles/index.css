@@ -1,0 +1,26 @@
+/* Entry stylesheet: builds dist/styles.css (tokens + every utility the components use).
+   Fonts are separate: import '@bayan/ui/fonts.css' once (or self-host Inter, Cairo and Cormorant Garamond). */
+@import 'tailwindcss';
+@import './theme.css';
+
+@source '../';
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--by-bg);
+    color: var(--by-fg);
+    font-family: var(--by-font-sans);
+    letter-spacing: -0.006em;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

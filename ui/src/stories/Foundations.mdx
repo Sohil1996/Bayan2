@@ -1,0 +1,53 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { ColorSwatches, RadiusScale, SurfaceSwatches, TypeScale } from './Foundations';
+
+<Meta title="Foundations/Tokens" />
+
+# Tokens
+
+All tokens are CSS variables (`--by-*`) defined in `src/styles/theme.css`, with a dark set on `:root` and a light set on `[data-theme='light']`.
+Tailwind utilities point at them, so `bg-gold` or `text-fg-muted` change with the theme automatically.
+The swatches below follow the **Theme** toolbar.
+
+## Colours
+
+<div className="rounded-panel bg-bg p-6 text-fg">
+  <ColorSwatches />
+</div>
+
+In dark mode the primary action is gold with dark text; in light mode it is navy with white text.
+Use `gold-ink`, not `gold`, for gold text on the page background: it passes WCAG AA contrast in both themes.
+
+## Surfaces
+
+Surfaces are utilities rather than colours, because they combine a gradient, border, shadow and blur.
+
+<SurfaceSwatches />
+
+## Type
+
+Latin text uses **Inter** for the interface and **Canela** for display (falling back to Cormorant Garamond if you don't hold a Canela licence).
+Arabic uses **Cairo** for everything. The switch happens automatically on `dir="rtl"` or `lang="ar"`.
+
+<div className="rounded-panel bg-bg p-6 text-fg">
+  <TypeScale sample="Where shall we wander today?" />
+</div>
+
+<div dir="rtl" lang="ar" className="mt-4 rounded-panel bg-bg p-6 text-fg">
+  <TypeScale sample="إلى أين نتجوّل اليوم؟" />
+</div>
+
+## Radii
+
+<div className="rounded-panel bg-bg p-6 text-fg">
+  <RadiusScale />
+</div>
+
+## Sizes
+
+| Token | Value | Use |
+|---|---|---|
+| `h-chip` | 30px | Chips, header icon buttons |
+| `h-control` | 44px | Buttons, tabs: the minimum touch target |
+| `h-field` | 50px | Form fields |
+| `min-h-composer` | 56px | Chat composer |
