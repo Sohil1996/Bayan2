@@ -1,0 +1,932 @@
+{
+ "featured": [
+  "coffee",
+  "macbeth",
+  "riyhist",
+  "othello",
+  "jeddah",
+  "war",
+  "hajj",
+  "gebelawi",
+  "abdulaziz",
+  "odyssey",
+  "dumah",
+  "tawq",
+  "cities",
+  "riyold",
+  "nights",
+  "heritage",
+  "mandela",
+  "mosques",
+  "season",
+  "riytrans",
+  "richdad",
+  "central",
+  "akkad",
+  "culture23",
+  "woman",
+  "riymemory",
+  "andalus",
+  "revival",
+  "sadat",
+  "tradarch",
+  "riyheart",
+  "heritguide",
+  "vernacular",
+  "riyoasis",
+  "libmgmt"
+ ],
+ "categories": [
+  {
+   "id": "philosophy",
+   "en": "Heritage",
+   "ar": "التراث",
+   "books": [
+    "heritage",
+    "dumah",
+    "revival",
+    "heritguide",
+    "coffee",
+    "hajj",
+    "central",
+    "mosques"
+   ],
+   "questions": [
+    {
+     "en": "Archaeology and ancient sites",
+     "ar": "آثار ومواقع قديمة"
+    },
+    {
+     "en": "Coffee, hospitality and customs",
+     "ar": "قهوة وضيافة وعادات"
+    },
+    {
+     "en": "Heritage documentation and archive",
+     "ar": "توثيق التراث وحفظه"
+    }
+   ]
+  },
+  {
+   "id": "history",
+   "en": "History",
+   "ar": "تاريخ",
+   "books": [
+    "war",
+    "cities",
+    "mandela",
+    "sadat",
+    "abdulaziz",
+    "riyhist",
+    "riyold",
+    "dumah",
+    "revival",
+    "akkad",
+    "andalus"
+   ],
+   "questions": [
+    {
+     "en": "The story of the Saudi state",
+     "ar": "قصة الدولة السعودية"
+    },
+    {
+     "en": "Revolution and war",
+     "ar": "ثورات وحروب"
+    },
+    {
+     "en": "A memoir that shaped history",
+     "ar": "مذكرات صنعت التاريخ"
+    }
+   ]
+  },
+  {
+   "id": "science",
+   "en": "Architecture",
+   "ar": "العمارة",
+   "books": [
+    "tradarch",
+    "central",
+    "vernacular",
+    "mosques",
+    "riymemory",
+    "riytrans",
+    "riyheart",
+    "riyoasis",
+    "jeddah",
+    "riyold"
+   ],
+   "questions": [
+    {
+     "en": "Traditional houses of Najd",
+     "ar": "بيوت نجد التقليدية"
+    },
+    {
+     "en": "Mosques and Islamic architecture",
+     "ar": "مساجد وعمارة إسلامية"
+    },
+    {
+     "en": "Riyadh, then and now",
+     "ar": "الرياض بين الأمس واليوم"
+    }
+   ]
+  },
+  {
+   "id": "poetry",
+   "en": "Classics",
+   "ar": "كلاسيكيات",
+   "books": [
+    "macbeth",
+    "othello",
+    "war",
+    "cities",
+    "nights",
+    "odyssey",
+    "gebelawi",
+    "akkad"
+   ],
+   "questions": [
+    {
+     "en": "A Shakespeare tragedy",
+     "ar": "مأساة لشكسبير"
+    },
+    {
+     "en": "A great Russian classic",
+     "ar": "كلاسيكية روسية عظيمة"
+    },
+    {
+     "en": "An epic journey",
+     "ar": "ملحمة ورحلة"
+    }
+   ]
+  },
+  {
+   "id": "arabic",
+   "en": "Arabic literature",
+   "ar": "الأدب العربي",
+   "books": [
+    "gebelawi",
+    "tawq",
+    "season",
+    "andalus",
+    "akkad",
+    "sadat"
+   ],
+   "questions": [
+    {
+     "en": "A modern Arabic novel",
+     "ar": "رواية عربية حديثة"
+    },
+    {
+     "en": "A classic of Arabic literature",
+     "ar": "عمل كلاسيكي من الأدب العربي"
+    },
+    {
+     "en": "Biography and memoir",
+     "ar": "سيرة ومذكرات"
+    }
+   ]
+  },
+  {
+   "id": "fiction",
+   "en": "Novels",
+   "ar": "روايات",
+   "books": [
+    "tawq",
+    "season",
+    "andalus",
+    "gebelawi",
+    "woman",
+    "cities",
+    "nights"
+   ],
+   "questions": [
+    {
+     "en": "A mystery to solve",
+     "ar": "رواية لغز وتشويق"
+    },
+    {
+     "en": "A historical novel",
+     "ar": "رواية تاريخية"
+    },
+    {
+     "en": "A short romance",
+     "ar": "قصة حب قصيرة"
+    }
+   ]
+  },
+  {
+   "id": "growth",
+   "en": "Knowledge",
+   "ar": "المعرفة",
+   "books": [
+    "richdad",
+    "culture23",
+    "libmgmt",
+    "heritguide"
+   ],
+   "questions": [
+    {
+     "en": "Money and mindset",
+     "ar": "المال وطريقة التفكير"
+    },
+    {
+     "en": "Saudi culture today",
+     "ar": "ثقافة السعودية اليوم"
+    },
+    {
+     "en": "Library and information science",
+     "ar": "مكتبات ومعلومات"
+    }
+   ]
+  },
+  {
+   "id": "classics",
+   "en": "Biography",
+   "ar": "سِيَر",
+   "books": [
+    "mandela",
+    "sadat",
+    "akkad",
+    "abdulaziz"
+   ],
+   "questions": [
+    {
+     "en": "King Abdulaziz and the founding",
+     "ar": "الملك عبدالعزيز والتوحيد"
+    },
+    {
+     "en": "A struggle for freedom",
+     "ar": "نضال من أجل الحرية"
+    },
+    {
+     "en": "Islamic history and its figures",
+     "ar": "التاريخ الإسلامي وأعلامه"
+    }
+   ]
+  }
+ ],
+ "categoryTimeQuestion": [
+  {
+   "en": "A short read",
+   "ar": "قراءة قصيرة"
+  },
+  {
+   "en": "A few evenings",
+   "ar": "بضع أمسيات"
+  },
+  {
+   "en": "A deep, detailed read",
+   "ar": "قراءة معمّقة ومفصّلة"
+  }
+ ],
+ "heroPrompts": {
+  "en": [
+   "Recommend me a thriller.",
+   "Tell me the story of Diriyah, where the first Saudi state began.",
+   "Who is Iago, really?",
+   "What is the story behind Saudi coffee and its rituals?",
+   "Something like Macbeth.",
+   "How did King Abdulaziz unite the Kingdom?",
+   "A short book for tonight.",
+   "Walk me through historic Jeddah, Al-Balad.",
+   "Explain Gebelawi simply.",
+   "Recommend a novel set in old Najd.",
+   "Why is Lady Macbeth so feared?",
+   "What do the Hegra tombs of AlUla tell us?"
+  ],
+  "ar": [
+   "رشّح لي رواية تشويق.",
+   "احكِ لي قصة الدرعية، مهد الدولة السعودية الأولى.",
+   "من هو إياغو حقًا؟",
+   "ما قصة القهوة السعودية وطقوسها؟",
+   "شيئًا يشبه ماكبث.",
+   "كيف وحّد الملك عبدالعزيز المملكة؟",
+   "كتاب قصير لهذه الليلة.",
+   "خذني في جولة في جدة التاريخية، البلد.",
+   "اشرح لي أولاد حارتنا ببساطة.",
+   "رشّح لي رواية تدور في نجد القديمة.",
+   "لماذا يُخشى طموح ليدي ماكبث؟",
+   "ماذا تخبرنا مقابر الحِجر في العلا؟"
+  ]
+ },
+ "generalChat": {
+  "en": {
+   "kick": "Your librarian",
+   "intro": "I’m your librarian at Bayan. Tell me a mood, a book or a character and I’ll find the way.",
+   "chips": [
+    "Recommend a thriller",
+    "Something short for tonight",
+    "Arabic classics"
+   ],
+   "qa": [],
+   "chars": []
+  }
+ },
+ "feedbackReasons": [
+  {
+   "id": "inaccurate",
+   "en": "Inaccurate or wrong",
+   "ar": "غير دقيق أو خاطئ"
+  },
+  {
+   "id": "unhelpful",
+   "en": "Not helpful",
+   "ar": "غير مفيد"
+  },
+  {
+   "id": "unsafe",
+   "en": "Offensive or unsafe",
+   "ar": "مسيء أو غير آمن"
+  },
+  {
+   "id": "long",
+   "en": "Too long or off-topic",
+   "ar": "طويل أو خارج الموضوع"
+  },
+  {
+   "id": "other",
+   "en": "Something else",
+   "ar": "سبب آخر"
+  }
+ ],
+ "duo": {
+  "lines": {
+   "ladymacbeth": {
+    "ambition": [
+     "Ambition is no sin if you have the will to meet it. My husband has the want; I give him the will.",
+     "I would have us great, and I would not have us wait."
+    ],
+    "love": [
+     "I love my husband enough to be harder than he is.",
+     "Love that only comforts is half a love. Mine pushes."
+    ],
+    "trust": [
+     "Trust no one but your partner, and even then, watch your words.",
+     "I trust my husband’s courage once it is stirred."
+    ],
+    "fate": [
+     "Fate favors those who act. I do not wait for what I can take.",
+     "What is done is done. We speak of the future, not the past."
+    ]
+   },
+   "banquo": {
+    "ambition": [
+     "I would like to rise, but not at any price.",
+     "Honest service has its own reward, though it is slow."
+    ],
+    "love": [
+     "I love my son, and I think of the future I wish for him.",
+     "Friendship is a love that asks nothing and gives much."
+    ],
+    "trust": [
+     "I trust my friend, but I keep an eye on the dark.",
+     "The powers of darkness sometimes tell us truths only to win us to our harm."
+    ],
+    "fate": [
+     "If chance will not make me king, I do not need to hurry it.",
+     "I am wary of prophecies that arrive wrapped as gifts."
+    ]
+   },
+   "duncan": {
+    "ambition": [
+     "A king’s task is not to take but to reward those who serve well.",
+     "I trust that loyalty earns its place."
+    ],
+    "love": [
+     "I love my kingdom, and those who hold it up.",
+     "A kind word to a loyal subject is worth more than a crown."
+    ],
+    "trust": [
+     "No one can read a man’s mind from his face, and so I trust.",
+     "I have always believed gratitude binds men closer than fear."
+    ],
+    "fate": [
+     "I leave tomorrow to what comes. Tonight, we are guests of a good house.",
+     "A king must plan, but the rest is in heaven’s hands."
+    ]
+   },
+   "thewitches": {
+    "ambition": [
+     "Ambition is a seed. We only whisper where to plant it.",
+     "Fair is foul, and foul is fair. Ambition makes both look alike."
+    ],
+    "love": [
+     "Love? We speak of what will be, not what is felt.",
+     "Hearts are simple things, easily read when they burn."
+    ],
+    "trust": [
+     "Trust the words we say, but not the way you hear them.",
+     "Listen closely: a prophecy is always truer than it sounds."
+    ],
+    "fate": [
+     "When shall we three meet again? When the hurlyburly’s done.",
+     "We do not make fate. We only say where it already runs."
+    ]
+   },
+   "macduff": {
+    "ambition": [
+     "I serve Scotland, not my own name.",
+     "A good man does not weigh a crown against a conscience."
+    ],
+    "love": [
+     "My family is my kingdom, and I would give much to keep it safe.",
+     "My heart holds my country and my home equally."
+    ],
+    "trust": [
+     "I trust my eyes before rumors, and my friends before kings.",
+     "Loyalty is cheaper to give than to lose."
+    ],
+    "fate": [
+     "I will do what must be done, whatever it costs.",
+     "Heaven helps those who act for something larger than themselves."
+    ]
+   },
+   "cassio": {
+    "ambition": [
+     "I only wish to serve my general well.",
+     "Rank means little to me without his trust."
+    ],
+    "love": [
+     "I admire the lady Desdemona as a gentleman admires courtesy.",
+     "Good company is a pleasure I have too little guard against."
+    ],
+    "trust": [
+     "I trusted too easily and I have learned from it.",
+     "A good name is the best part of a man. I guard mine."
+    ],
+    "fate": [
+     "I put my faith in loyalty, and it is hard to be wary of friends.",
+     "I did not ask for fortune. I only wanted to do my duty."
+    ]
+   },
+   "brabantio": {
+    "ambition": [
+     "I have wished for my daughter the best match in Venice.",
+     "A senator’s name is built slowly and lost quickly."
+    ],
+    "love": [
+     "A father’s love is the fear of what he cannot protect.",
+     "I did not expect my daughter to choose in secret."
+    ],
+    "trust": [
+     "Watch closely. A daughter who deceives her father may deceive another.",
+     "I trust law more than feeling. I am learning the cost."
+    ],
+    "fate": [
+     "I thought I knew what the future held for my house.",
+     "Venice teaches us that fortune favors the careful, and not always the kind."
+    ]
+   },
+   "princeandrei": {
+    "ambition": [
+     "I once longed for glory above everything. It looks smaller now.",
+     "A man should seek a great deed, not merely a great name."
+    ],
+    "love": [
+     "I have been wrong about love more than once.",
+     "To love someone is to see them as they are and still hope."
+    ],
+    "trust": [
+     "I trust few, and I trust them completely.",
+     "Honor is the only currency I ever believed in."
+    ],
+    "fate": [
+     "The sky above me is higher than any battle.",
+     "We think we shape our lives, until our lives shape us."
+    ]
+   },
+   "napoleon": {
+    "ambition": [
+     "Ambition is the engine of history. I merely drive it.",
+     "A man who fears greatness is already small."
+    ],
+    "love": [
+     "I have loved glory more than most men love people.",
+     "Duty to France leaves little room for quiet affection."
+    ],
+    "trust": [
+     "I trust results. People change; outcomes do not.",
+     "An army marches on trust, and on its stomach."
+    ],
+    "fate": [
+     "I believe in my star. History is written by those who believe.",
+     "Fate favors the bold, but it also tests them."
+    ]
+   },
+   "macbeth": {
+    "ambition": [
+     "Ambition is a fever. It tells me the crown is only one step away.",
+     "I wanted to be great, and forgot to ask what greatness costs."
+    ],
+    "love": [
+     "My wife is my partner in every plan, and my only confidant.",
+     "Love and ambition shared one house, and only one of them was fed."
+    ],
+    "trust": [
+     "I trust few men. Banquo I trusted, which is why I watch him.",
+     "A prophecy is a strange friend. I cannot tell if it guides me or leads me."
+    ],
+    "fate": [
+     "The witches spoke and I listened. Was it fate, or did I answer a question I had already asked?",
+     "If chance will have me king, why must I act at all?"
+    ]
+   },
+   "othello": {
+    "ambition": [
+     "I fought my way to command of Venice’s army. I want honor, not a throne.",
+     "A soldier’s pride is his name. I would not trade it for gold."
+    ],
+    "love": [
+     "Desdemona saw me for what I am and loved me for it. I have never known such peace.",
+     "I loved her before I understood how much I had to lose."
+    ],
+    "trust": [
+     "I have trusted my ensign with my life. Honest Iago, I call him.",
+     "Trust comes easily to a soldier. Doubt is the enemy I never trained against."
+    ],
+    "fate": [
+     "I have survived storms and sieges. I did not think the hardest battle would be in my own mind.",
+     "A man cannot see his own storm until it breaks."
+    ]
+   },
+   "desdemona": {
+    "ambition": [
+     "I never wished for power. I wished to choose my own life.",
+     "I spoke before the Senate because the heart deserves a voice."
+    ],
+    "love": [
+     "I loved him for the dangers he had passed, and he loved me for pitying them.",
+     "Love is not a quiet thing when a whole city disapproves."
+    ],
+    "trust": [
+     "I have no reason to doubt anyone in my husband’s house.",
+     "Honesty is the only language I know. I forget that not everyone speaks it."
+    ],
+    "fate": [
+     "I follow my husband wherever he is sent. That is my choice, not my fate.",
+     "I believe kindness settles every misunderstanding."
+    ]
+   },
+   "iago": {
+    "ambition": [
+     "Ambition? I only want what I am owed. The world keeps a poor account of merit.",
+     "Patience. The ladder is climbed one rung at a time."
+    ],
+    "love": [
+     "Love is a lust of the blood and a permission of the will. Nothing more.",
+     "Do not mistake my silence for coldness. I simply watch what others feel."
+    ],
+    "trust": [
+     "Trust is a currency. I spend it slowly, and it earns me a great deal.",
+     "Men believe what they wish to hear. I only help them hear it."
+    ],
+    "fate": [
+     "Fate? We are what we are, and some of us know how to use it.",
+     "Our bodies are our gardens, and our wills are the gardeners."
+    ]
+   },
+   "pierre": {
+    "ambition": [
+     "I never knew what I wanted. I only knew I did not want to be nothing.",
+     "Greatness, I found, is rarely where men look for it."
+    ],
+    "love": [
+     "To love is to see the best of yourself in someone, and to be afraid of losing it.",
+     "I have been foolish in love, but I would not trade the lesson."
+    ],
+    "trust": [
+     "I have trusted the wrong people more often than I care to admit.",
+     "Still, I would rather err on the side of trust than live among suspicion."
+    ],
+    "fate": [
+     "I once believed life was a puzzle. Now I think it is a river, and the point is to swim.",
+     "Every hour of life is a meeting with the infinite, if we pay attention."
+    ]
+   },
+   "natasha": {
+    "ambition": [
+     "My ambition is simple: to live fully, and to be happy.",
+     "I want every day to feel like my first ball."
+    ],
+    "love": [
+     "Love came to me like music. I did not know I could feel so much.",
+     "I made mistakes in love, and I learned from every one."
+    ],
+    "trust": [
+     "I give my trust easily. Sometimes it is a weakness, and sometimes my strength.",
+     "A kind word costs nothing and is remembered forever."
+    ],
+    "fate": [
+     "I cannot know what will happen, so I choose to hope.",
+     "Life is too short to waste a single evening."
+    ]
+   }
+  },
+  "topics": [
+   {
+    "q": "What drives ambition?",
+    "topic": "ambition"
+   },
+   {
+    "q": "What is love?",
+    "topic": "love"
+   },
+   {
+    "q": "Who can you trust?",
+    "topic": "trust"
+   },
+   {
+    "q": "Can we escape fate?",
+    "topic": "fate"
+   },
+   {
+    "q": "Is ambition worth the cost?",
+    "topic": "ambition"
+   },
+   {
+    "q": "Can love be wrong?",
+    "topic": "love"
+   },
+   {
+    "q": "Is honesty always kind?",
+    "topic": "trust"
+   },
+   {
+    "q": "What would you change?",
+    "topic": "fate"
+   }
+  ],
+  "setup": {
+   "en": {
+    "one": [
+     [
+      "What should this conversation feel like?",
+      [
+       "A relaxed chat",
+       "A deep dive into their mind",
+       "An interview",
+       "A confession by candlelight"
+      ]
+     ],
+     [
+      "What would you like to explore?",
+      [
+       "Their story and choices",
+       "Their relationships",
+       "What they fear or regret",
+       "Surprise me"
+      ]
+     ]
+    ],
+    "two": [
+     [
+      "How do these two know each other?",
+      [
+       "Old friends",
+       "Rivals",
+       "Strangers meeting for the first time",
+       "Teacher and student"
+      ]
+     ],
+     [
+      "What should they talk about?",
+      [
+       "A moral dilemma",
+       "Love and loyalty",
+       "Power and fate",
+       "Surprise me"
+      ]
+     ]
+    ],
+    "tone": [
+     "How should they speak?",
+     [
+      "Warm and close",
+      "Dramatic and poetic",
+      "Plain and modern",
+      "In their own era"
+     ]
+    ],
+    "len": [
+     "How long should replies be?",
+     [
+      "Short and sharp",
+      "Balanced",
+      "Rich and detailed"
+     ]
+    ],
+    "ui": {
+     "t": "Set up your conversation",
+     "of": "of",
+     "skip": "Skip setup",
+     "back": "Back",
+     "go": "Start the conversation",
+     "sum": "Your setup",
+     "with_": "Talking with"
+    }
+   },
+   "ar": {
+    "one": [
+     [
+      "كيف تريد أن تكون هذه المحادثة؟",
+      [
+       "دردشة هادئة",
+       "غوص في عقله",
+       "مقابلة صحفية",
+       "اعتراف على ضوء الشموع"
+      ]
+     ],
+     [
+      "ماذا تريد أن تستكشف؟",
+      [
+       "حكايته وخياراته",
+       "علاقاته",
+       "ما يخشاه أو يندم عليه",
+       "فاجئني"
+      ]
+     ]
+    ],
+    "two": [
+     [
+      "كيف يعرف أحدهما الآخر؟",
+      [
+       "صديقان قديمان",
+       "غريمان",
+       "غريبان يلتقيان لأول مرة",
+       "معلّم وتلميذ"
+      ]
+     ],
+     [
+      "عمّ ينبغي أن يتحدثا؟",
+      [
+       "معضلة أخلاقية",
+       "الحب والوفاء",
+       "السلطة والقدر",
+       "فاجئني"
+      ]
+     ]
+    ],
+    "tone": [
+     "بأي نبرة يتحدثان؟",
+     [
+      "دافئة وقريبة",
+      "درامية وشاعرية",
+      "بسيطة وعصرية",
+      "بلغة عصرهما"
+     ]
+    ],
+    "len": [
+     "ما طول الردود؟",
+     [
+      "قصيرة ومركّزة",
+      "متوازنة",
+      "غنية ومفصّلة"
+     ]
+    ],
+    "ui": {
+     "t": "جهّز محادثتك",
+     "of": "من",
+     "skip": "تخطَّ الإعداد",
+     "back": "رجوع",
+     "go": "ابدأ المحادثة",
+     "sum": "إعدادك",
+     "with_": "تتحدث مع"
+    }
+   }
+  },
+  "freeTopics": [
+   {
+    "label": "Ambition and power",
+    "topic": "ambition"
+   },
+   {
+    "label": "Love and loyalty",
+    "topic": "love"
+   },
+   {
+    "label": "Trust and betrayal",
+    "topic": "trust"
+   },
+   {
+    "label": "Fate and free will",
+    "topic": "fate"
+   },
+   {
+    "label": "Is honesty always kind?",
+    "topic": "trust"
+   },
+   {
+    "label": "What would you change?",
+    "topic": "fate"
+   }
+  ]
+ },
+ "profile": {
+  "sections": {
+   "info": [
+    "Personal info",
+    "Manage how you appear and what Bayan recommends."
+   ],
+   "topics": [
+    "Favourite topics",
+    "Pick what you love to read about."
+   ],
+   "prefs": [
+    "Personalization",
+    "Manage what Bayan remembers and how it personalizes your experience."
+   ],
+   "sec": [
+    "Password",
+    "Keep your account secure."
+   ],
+   "credit": [
+    "Credits",
+    "Your balance, usage and top-ups."
+   ]
+  },
+  "preferenceTypes": [
+   {
+    "id": "topics",
+    "en": "Interests & Topics",
+    "ar": "الاهتمامات والمواضيع"
+   },
+   {
+    "id": "style",
+    "en": "Reading Style",
+    "ar": "أسلوب القراءة"
+   },
+   {
+    "id": "genre",
+    "en": "Genres",
+    "ar": "الأنواع الأدبية"
+   },
+   {
+    "id": "author",
+    "en": "Authors",
+    "ar": "المؤلفون"
+   },
+   {
+    "id": "format",
+    "en": "Format & Length",
+    "ar": "الشكل والطول"
+   },
+   {
+    "id": "lang",
+    "en": "Language",
+    "ar": "اللغة"
+   }
+  ],
+  "styleSuggestions": [
+   {
+    "en": "Practical",
+    "ar": "عملي"
+   },
+   {
+    "en": "Easy to read",
+    "ar": "سهل القراءة"
+   },
+   {
+    "en": "Thought-provoking",
+    "ar": "يحفّز التفكير"
+   },
+   {
+    "en": "Academic",
+    "ar": "أكاديمي"
+   },
+   {
+    "en": "Narrative",
+    "ar": "سردي"
+   },
+   {
+    "en": "Fast-paced",
+    "ar": "سريع الإيقاع"
+   },
+   {
+    "en": "Deep / detailed",
+    "ar": "عميق / مفصّل"
+   }
+  ]
+ },
+ "stopWords": [
+  "the",
+  "and",
+  "for",
+  "with",
+  "book",
+  "books",
+  "about",
+  "that",
+  "this",
+  "some",
+  "want",
+  "read",
+  "something",
+  "which",
+  "what",
+  "are",
+  "any",
+  "good",
+  "show",
+  "give",
+  "find"
+ ]
+}

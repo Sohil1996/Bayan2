@@ -1,0 +1,127 @@
+{
+ "media": [
+  {
+   "title": {
+    "en": "Riyadh: From Oasis to Capital",
+    "ar": "الرياض: من الواحة إلى العاصمة"
+   },
+   "kind": {
+    "en": "Video · 3:24",
+    "ar": "فيديو · 3:24"
+   },
+   "by": {
+    "en": "By Bayan",
+    "ar": "من بيان"
+   },
+   "image": "img/b-riyheart.jpg"
+  },
+  {
+   "title": {
+    "en": "The Hajj Journey in Art",
+    "ar": "رحلة الحج في الفن"
+   },
+   "kind": {
+    "en": "Image",
+    "ar": "صورة"
+   },
+   "by": {
+    "en": "By User",
+    "ar": "من مستخدم"
+   },
+   "image": "img/b-hajj.jpg"
+  },
+  {
+   "title": {
+    "en": "The Sound of the Dallah",
+    "ar": "صوت الدلّة"
+   },
+   "kind": {
+    "en": "Audio",
+    "ar": "صوت"
+   },
+   "by": {
+    "en": "By Bayan",
+    "ar": "من بيان"
+   },
+   "image": "img/b-coffee.jpg"
+  },
+  {
+   "title": {
+    "en": "Reimagining Gebelawi",
+    "ar": "إعادة تخيّل جبلاوي"
+   },
+   "kind": {
+    "en": "Image",
+    "ar": "صورة"
+   },
+   "by": {
+    "en": "By User",
+    "ar": "من مستخدم"
+   },
+   "image": "img/scene-gebelawi.jpg"
+  },
+  {
+   "title": {
+    "en": "The Rawasheen of Jeddah",
+    "ar": "رواشين جدة"
+   },
+   "kind": {
+    "en": "Image",
+    "ar": "صورة"
+   },
+   "by": {
+    "en": "By Bayan",
+    "ar": "من بيان"
+   },
+   "image": "img/b-jeddah.jpg"
+  }
+ ],
+ "clubs": [
+  {
+   "image": "img/b-riyhist.jpg",
+   "title": {
+    "en": "Riyadh History Club",
+    "ar": "نادي تاريخ الرياض"
+   },
+   "members": {
+    "en": "1.8K members",
+    "ar": "١٫٨ ألف عضو"
+   },
+   "question": {
+    "en": "How did an oasis become a capital?",
+    "ar": "كيف أصبحت الواحة عاصمة؟"
+   }
+  },
+  {
+   "image": "img/b-heritage.jpg",
+   "title": {
+    "en": "Saudi Heritage Club",
+    "ar": "نادي التراث السعودي"
+   },
+   "members": {
+    "en": "1.2K members",
+    "ar": "١٫٢ ألف عضو"
+   },
+   "question": {
+    "en": "Which heritage site should everyone visit first?",
+    "ar": "أي موقع تراثي يجب أن يزوره الجميع أولًا؟"
+   }
+  },
+  {
+   "image": "img/b-tradarch.jpg",
+   "title": {
+    "en": "Architecture Circle",
+    "ar": "حلقة العمارة"
+   },
+   "members": {
+    "en": "2.4K members",
+    "ar": "٢٫٤ ألف عضو"
+   },
+   "question": {
+    "en": "What can old houses teach modern cities?",
+    "ar": "ماذا تعلّم البيوت القديمة المدن الحديثة؟"
+   }
+  }
+ ],
+ "more": []
+}
