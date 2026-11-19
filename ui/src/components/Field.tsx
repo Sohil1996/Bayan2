@@ -11,6 +11,8 @@ export interface TextFieldProps extends Omit<InputHTMLAttributes<HTMLInputElemen
   icon?: ReactNode;
   hint?: string;
   error?: string;
+  /** Labels for the password reveal button (localise these). */
+  revealLabels?: { show: string; hide: string };
 }
 
 /**
@@ -19,7 +21,7 @@ export interface TextFieldProps extends Omit<InputHTMLAttributes<HTMLInputElemen
  * so an email typed in the Arabic interface still reads left to right.
  */
 export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(function TextField(
-  { label, hideLabel, icon, hint, error, className, id, type = 'text', ...rest },
+  { label, hideLabel, icon, hint, error, revealLabels = { show: 'Show password', hide: 'Hide password' }, className, id, type = 'text', ...rest },
   ref,
 ) {
   const autoId = useId();
@@ -53,7 +55,7 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(function T
           <button
             type="button"
             onClick={() => setReveal((v) => !v)}
-            aria-label={reveal ? 'Hide password' : 'Show password'}
+            aria-label={reveal ? revealLabels.hide : revealLabels.show}
             aria-pressed={reveal}
             className="focus-ring -me-1 grid size-9 place-items-center rounded-full text-fg-subtle hover:text-fg"
           >

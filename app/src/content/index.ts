@@ -120,6 +120,9 @@ export interface GlobalContent {
 }
 
 export const GLOBAL = globalJson as unknown as GlobalContent;
+const ORDER = ['philosophy', 'arabic', 'science', 'history', 'fiction', 'poetry', 'growth', 'classics'];
+/** Categories in display order. */
+export const CATEGORIES = [...GLOBAL.categories].sort((a, b) => ORDER.indexOf(a.id) - ORDER.indexOf(b.id));
 
 export interface ExploreContent {
   media: { title: Bi; kind: Bi; by: Bi; image: string }[];

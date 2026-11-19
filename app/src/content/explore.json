@@ -123,5 +123,36 @@
    }
   }
  ],
- "more": []
+ "more": [
+  {
+   "title": {
+    "en": "Community Creations",
+    "ar": "إبداعات المجتمع"
+   },
+   "desc": {
+    "en": "Media and ideas from readers like you",
+    "ar": "وسائط وأفكار من قراء مثلك"
+   }
+  },
+  {
+   "title": {
+    "en": "Bayan’s Creations",
+    "ar": "إبداعات بيان"
+   },
+   "desc": {
+    "en": "Original media inspired by great books",
+    "ar": "وسائط أصلية مستوحاة من الكتب العظيمة"
+   }
+  },
+  {
+   "title": {
+    "en": "Reading Challenges",
+    "ar": "تحديات القراءة"
+   },
+   "desc": {
+    "en": "Join themed reading journeys",
+    "ar": "انضم إلى رحلات قراءة موضوعية"
+   }
+  }
+ ]
 }

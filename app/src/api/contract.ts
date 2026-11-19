@@ -181,6 +181,10 @@ export interface Encounter {
   kind: 'character' | 'duo';
   names: string[];
   bookIds: string[];
+  characterIds?: string[];
+  topic?: string;
+  /** Conversation this encounter happened in, if any. */
+  conversationId?: string;
   updated: string;
 }
 
