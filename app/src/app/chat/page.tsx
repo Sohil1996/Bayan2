@@ -2,7 +2,6 @@
 import { Suspense, useEffect, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
-import { Wordmark } from '@bayan/ui';
 import type { Suggestion } from '@/api';
 import { GLOBAL, CATEGORIES } from '@/content';
 import { Backdrop } from '@/components/Backdrop';
@@ -39,10 +38,9 @@ function Librarian() {
       <Backdrop variant="chat" />
       <SiteHeader
         start={
-          <button type="button" onClick={() => router.push('/')} className="focus-ring inline-flex items-center gap-2 rounded-full pe-2 text-fg">
+          <button type="button" onClick={() => router.push('/')} className="focus-ring glass inline-flex h-chip items-center gap-1.5 rounded-full ps-2.5 pe-3.5 text-sm font-medium text-fg">
             <ArrowLeft size={16} className="rtl:-scale-x-100" aria-hidden="true" />
-            <Wordmark size={18} lang={lang} className="max-sm:[&>span]:hidden" />
-          <span className="sr-only">{t('Back')}</span>
+          <span>{t('Back')}</span>
           </button>
         }
       />
