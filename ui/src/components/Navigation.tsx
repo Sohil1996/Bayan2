@@ -30,13 +30,13 @@ export function Dock({ items, activeId, onNavigate, centerLabel = 'New conversat
   const item = (it: DockItem) => {
     const on = it.id === activeId;
     const cls = cn(
-      'focus-ring flex h-[50px] min-w-[60px] flex-col items-center justify-center gap-[5px] rounded-full px-2 text-2xs leading-none font-medium text-dock-fg transition-opacity [&_svg]:size-5',
+      'focus-ring flex h-[50px] min-w-[56px] flex-col items-center justify-center gap-[5px] rounded-full px-2 text-2xs leading-none font-medium text-dock-fg transition-opacity [&_svg]:size-5',
       on ? 'opacity-100' : 'opacity-70 hover:opacity-100',
     );
     const inner = (
       <>
         {it.icon}
-        <span className={cn(on && 'underline decoration-gold decoration-2 underline-offset-[5px]')}>{it.label}</span>
+        <span className={cn('whitespace-nowrap', on && 'underline decoration-gold decoration-2 underline-offset-[5px]')}>{it.label}</span>
       </>
     );
     return it.href ? (
