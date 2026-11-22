@@ -13,6 +13,8 @@ export function SiteDock() {
   const active = path === '/' ? 'home' : path.startsWith('/explore') ? 'explore' : path.startsWith('/books') ? 'books' : path.startsWith('/library') || path.startsWith('/favorites') ? 'library' : '';
   return (
     <Dock
+      // The live site keeps the dock in the same left-to-right order in Arabic.
+      dir="ltr"
       label={t('Primary')}
       activeId={active}
       centerLabel={t('Ask the Librarian')}

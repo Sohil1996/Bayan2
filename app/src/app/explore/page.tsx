@@ -24,7 +24,7 @@ export default function Explore() {
           <>
             <section className="mt-7">
               <SectionHeader as="h2" title={t('Featured Media')} description={t('Curated creations from Bayan and the community.')} className="[&>div]:items-center" />
-              <ul className="no-scrollbar mt-4 flex snap-x gap-3 overflow-x-auto pb-2">
+              <ul tabIndex={0} aria-label={t('Featured Media')} className="focus-ring no-scrollbar mt-4 flex snap-x gap-3 overflow-x-auto rounded-[22px] pb-2">
                 {feed.media.map((m) => (
                   <li key={m.title} className="relative h-[200px] w-[min(380px,78vw)] shrink-0 snap-start overflow-hidden rounded-[22px] first:w-[min(380px,78vw)] [&:not(:first-child)]:w-[200px]">
                     <img src={`/${m.image}`} alt="" className="absolute inset-0 size-full object-cover" />

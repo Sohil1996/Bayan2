@@ -57,9 +57,10 @@ function Duo() {
   const header = (
     <SiteHeader
       start={
-        <button type="button" onClick={() => (started ? setStarted(false) : router.push('/'))} className="focus-ring inline-flex items-center gap-2 rounded-full pe-2 text-fg" aria-label={t('Back')}>
+        <button type="button" onClick={() => (started ? setStarted(false) : router.push('/'))} className="focus-ring inline-flex items-center gap-2 rounded-full pe-2 text-fg">
           <ArrowLeft size={16} className="rtl:-scale-x-100" aria-hidden="true" />
           <Wordmark size={18} lang={lang} className="max-sm:[&>span]:hidden" />
+          <span className="sr-only">{t('Back')}</span>
         </button>
       }
     />

@@ -120,14 +120,14 @@ export function ChatView(p: ChatViewProps) {
         <Composer label={p.placeholder} placeholder={p.placeholder} sendLabel={t('Send')} attachLabel={t('More options')} onSend={p.onSend} disabled={p.composerDisabled} />
       </div>
 
-      <FeedbackDialog
+      {bad && <FeedbackDialog
         open={!!bad}
         onClose={() => setBad(null)}
         onSubmit={(reason, note) => {
           if (bad) p.onFeedback(bad, 'bad', reason, note);
           setBad(null);
         }}
-      />
+      />}
     </div>
   );
 
@@ -210,7 +210,7 @@ function FeedbackDialog({ open, onClose, onSubmit }: { open: boolean; onClose: (
           </button>
         ))}
       </div>
-      <textarea value={note} onChange={(e) => setNote(e.target.value)} dir="auto" aria-label={t('Tell us more (optional)')} placeholder={t('Tell us more (optional)')} className="glass mt-4 h-24 w-full resize-none rounded-[18px] p-3 text-sm text-fg outline-none placeholder:text-fg-subtle" />
+      <textarea value={note} onChange={(e) => setNote(e.target.value)} dir="auto" aria-label={t('Tell us more (optional)')} placeholder={t('Tell us more (optional)')} className="surface-field mt-4 h-24 w-full resize-none rounded-[16px] p-3 text-sm text-fg outline-none placeholder:text-fg-subtle" />
     </Dialog>
   );
 }

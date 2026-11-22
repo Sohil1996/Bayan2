@@ -46,11 +46,11 @@ export function SiteHeader({ recommend, start, back, extra, className }: SiteHea
           { value: 'ar', label: 'عربي', lang: 'ar' },
         ]}
       />
-      <Button variant="glass" size="sm" className="sm:hidden" lang={lang === 'ar' ? 'en' : 'ar'} onClick={() => setLang(lang === 'ar' ? 'en' : 'ar')} aria-label={lang === 'ar' ? 'English' : 'العربية'}>
+      <Button variant="glass" size="sm" className="sm:hidden" lang={lang === 'ar' ? 'en' : 'ar'} onClick={() => setLang(lang === 'ar' ? 'en' : 'ar')}>
         {lang === 'ar' ? 'EN' : 'عربي'}
       </Button>
       {user && (
-        <Link href="/favorites" aria-label={t('Favorites')} className="focus-ring glass inline-flex h-chip items-center gap-1.5 rounded-full px-3 text-sm font-semibold text-fg">
+        <Link href="/favorites" aria-label={`${t('Favorites')} ${favorites.length}`} className="focus-ring glass inline-flex h-chip items-center gap-1.5 rounded-full px-3 text-sm font-semibold text-fg">
           <Heart size={14} fill="currentColor" aria-hidden="true" />
           {favorites.length}
         </Link>
@@ -80,7 +80,7 @@ export function SiteHeader({ recommend, start, back, extra, className }: SiteHea
       start={
         start ?? (
           <Link href="/" aria-label={t('Bayan home')} className="focus-ring rounded-md">
-            <Wordmark size={19} lang={lang} className="max-sm:[&>span]:hidden" />
+            <Wordmark size={19} lang={lang} className={recommend ? 'max-sm:[&>span]:hidden' : undefined} />
           </Link>
         )
       }

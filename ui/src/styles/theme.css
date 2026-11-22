@@ -86,6 +86,12 @@
   --by-sugg-fill: rgb(17 20 32 / 0.82);
   --by-sugg-edge: linear-gradient(100deg, rgb(94 175 229 / 0.5), rgb(236 195 125 / 0.5));
 
+  /* text fields and inline search (quieter than glass) */
+  --by-field-bg: rgb(13 15 24 / 0.6);
+  --by-field-border: rgb(255 255 255 / 0.12);
+  --by-field-shadow: none;
+  --by-field-focus: rgb(239 201 131 / 0.7);
+
   /* tags */
   --by-tag-bg: rgb(235 193 122 / 0.14);
   --by-tag-fg: var(--by-gold);
@@ -146,6 +152,11 @@
 
   --by-sugg-fill: rgb(249 250 252 / 0.9);
   --by-sugg-edge: linear-gradient(100deg, rgb(94 175 229 / 0.5), rgb(227 165 58 / 0.5));
+
+  --by-field-bg: rgb(249 250 252 / 0.72);
+  --by-field-border: rgb(18 21 32 / 0.12);
+  --by-field-shadow: 0 2px 10px rgb(18 21 32 / 0.08);
+  --by-field-focus: rgb(167 125 55);
 
   --by-tag-bg: rgb(30 41 75 / 0.1);
   --by-tag-fg: var(--by-navy);
@@ -232,6 +243,17 @@
   box-shadow: var(--by-glass-shadow);
   -webkit-backdrop-filter: var(--by-glass-blur);
   backdrop-filter: var(--by-glass-blur);
+}
+
+@utility surface-field {
+  background: var(--by-field-bg);
+  border: 1px solid var(--by-field-border);
+  box-shadow: var(--by-field-shadow);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  &:focus-within {
+    border-color: var(--by-field-focus);
+  }
 }
 
 @utility surface-card {

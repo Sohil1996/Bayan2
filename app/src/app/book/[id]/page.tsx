@@ -166,7 +166,7 @@ function Chat({ book, firstQuestion, conversation, talk, fav, onToggleFav, t, p 
         className="max-lg:hidden"
         extra={spoiler}
         start={
-          <button type="button" onClick={() => router.push('/')} className="focus-ring inline-flex items-center gap-2 rounded-full pe-2 text-fg" aria-label={t('Back')}>
+          <button type="button" onClick={() => router.push('/')} className="focus-ring inline-flex items-center gap-2 rounded-full pe-2 text-fg">
             <ArrowLeft size={16} className="rtl:-scale-x-100" aria-hidden="true" />
             <Wordmark size={18} lang={lang} />
             <span className="text-xs text-fg-muted">{t('Back')}</span>

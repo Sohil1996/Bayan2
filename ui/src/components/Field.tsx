@@ -36,7 +36,7 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(function T
       </label>
       <div
         className={cn(
-          'glass flex h-field items-center gap-2.5 rounded-full px-[18px] transition-shadow focus-within:shadow-[0_0_0_3px_rgb(235_193_122/0.35)]',
+          'surface-field flex h-field items-center gap-2.5 rounded-[16px] px-[18px] transition-[border-color,box-shadow] focus-within:shadow-[0_0_0_3px_rgb(235_193_122/0.2)]',
           error && 'shadow-[0_0_0_2px_var(--by-danger)]',
         )}
       >
@@ -95,7 +95,8 @@ export function SearchBar({ label, submitLabel = 'Send', onSubmitValue, tone = '
       role="search"
       onSubmit={submit}
       className={cn(
-        'glass flex items-center gap-3 rounded-full',
+        'flex items-center gap-3 rounded-full',
+        hero ? 'glass' : 'surface-field',
         hero ? 'h-[58px] ps-[30px] pe-[9px] shadow-[inset_0_1px_0_rgb(255_255_255/0.14),0_0_50px_rgb(235_193_122/0.2),0_14px_40px_rgb(0_0_0/0.4)]' : 'h-control ps-4 pe-1.5',
         className,
       )}

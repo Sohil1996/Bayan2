@@ -4,15 +4,18 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "ui": "npm --prefix ../ui run build",
-    "predev": "npm run ui",
+    "ui": "node scripts/build-ui.mjs",
+    "assets": "node scripts/copy-assets.mjs",
+    "predev": "npm run ui && npm run assets",
     "dev": "next dev -p 3000",
-    "prebuild": "npm run ui",
+    "prebuild": "npm run ui && npm run assets",
     "build": "next build",
     "start": "next start -p 3000",
     "typecheck": "tsc --noEmit",
     "test": "playwright test",
-    "assets": "node scripts/copy-assets.mjs"
+    "test:ui": "playwright test --ui",
+    "compare": "node scripts/compare-live.mjs",
+    "engine-sample": "tsx scripts/engine-sample.ts"
   },
   "dependencies": {
     "@bayan/ui": "file:../ui",

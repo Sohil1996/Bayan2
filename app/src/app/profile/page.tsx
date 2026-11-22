@@ -1,7 +1,7 @@
 'use client';
 import { Suspense, useEffect, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { Ban, BookOpen, Coins, Lightbulb, Lock, LogOut, Plus, SlidersHorizontal, Sparkles, User as UserIcon } from 'lucide-react';
+import { Ban, BookOpen, ChevronLeft, ChevronRight, Coins, Lightbulb, Lock, LogOut, Plus, SlidersHorizontal, Sparkles, User as UserIcon } from 'lucide-react';
 import { Avatar, Button, Chip, CreditMeter, Switch, TextField, cn } from '@bayan/ui';
 import { api, type Credits, type TopUpPlan } from '@/api';
 import { GLOBAL } from '@/content';
@@ -15,7 +15,13 @@ function Profile() {
   const { t, lang, user, setUser, ready } = usePrefs();
   const router = useRouter();
   const params = useSearchParams();
-  const [tab, setTab] = useState<Tab>((params.get('tab') as Tab) || 'info');
+  const [tab, setTabState] = useState<Tab>((params.get('tab') as Tab) || 'info');
+  /** Phones show the section list first, then one section with a Back button (as on the live site). */
+  const [phoneSection, setPhoneSection] = useState(!!params.get('tab'));
+  const setTab = (x: Tab) => {
+    setTabState(x);
+    setPhoneSection(true);
+  };
 
   useEffect(() => {
     if (ready && !user) router.replace('/signin');
@@ -40,10 +46,10 @@ function Profile() {
   return (
     <PageShell>
       <div className="mx-auto grid max-w-[1200px] grid-cols-[minmax(0,1fr)] gap-8 px-5 pt-8 md:grid-cols-[240px_minmax(0,1fr)] md:px-8">
-        <aside className="flex flex-col md:sticky md:top-24 md:h-[calc(100dvh-140px)]">
+        <aside className={cn('flex flex-col md:sticky md:top-24 md:h-[calc(100dvh-140px)]', phoneSection && 'max-md:hidden')}>
           <div className="flex flex-col items-center text-center">
             <span className="relative">
-              <Avatar name={user.name} size={72} ring decorative className="font-display" />
+              <Avatar name={user.name.split(/\s+/)[0]} size={72} ring decorative className="font-display" />
               <span className="absolute -end-1 -top-1 grid size-6 place-items-center rounded-full bg-gold text-[#0d0f17]" aria-hidden="true">
                 <Plus size={14} />
               </span>
@@ -53,19 +59,23 @@ function Profile() {
               {t('Joined')} {joined}
             </p>
           </div>
-          <nav aria-label={t('Profile')} className="mt-6 flex gap-1 max-md:no-scrollbar max-md:overflow-x-auto md:flex-col">
+          <nav aria-label={t('Profile')} className="mt-6 flex flex-col gap-1 max-md:gap-2">
             {nav.map(([id, icon]) => (
-              <button key={id} type="button" aria-current={tab === id ? 'page' : undefined} onClick={() => setTab(id)} className={cn('focus-ring flex shrink-0 cursor-pointer items-center gap-2.5 rounded-full border px-4 py-2 text-sm whitespace-nowrap [&_svg]:size-4', tab === id ? 'surface-tab-on' : 'border-transparent text-fg-muted hover:text-fg')}>
+              <button key={id} type="button" aria-current={tab === id ? 'page' : undefined} onClick={() => setTab(id)} className={cn('focus-ring flex shrink-0 cursor-pointer items-center gap-2.5 border text-sm whitespace-nowrap [&_svg]:size-4', 'max-md:surface-card max-md:rounded-card max-md:px-4 max-md:py-3.5 max-md:font-medium max-md:text-fg', 'md:rounded-full md:px-4 md:py-2', tab === id ? 'md:surface-tab-on' : 'md:border-transparent md:text-fg-muted md:hover:text-fg')}>
                 {icon}
-                {t(S[id][0])}
+                <span className="flex-1 text-start">{t(S[id][0])}</span>
+                <ChevronRight className="text-fg-subtle md:hidden rtl:-scale-x-100" aria-hidden="true" />
               </button>
             ))}
           </nav>
-          <button type="button" onClick={signOut} className="focus-ring mt-auto hidden w-fit items-center gap-2 rounded-full px-4 py-2 text-sm text-danger md:inline-flex">
+          <button type="button" onClick={signOut} className="focus-ring mt-6 inline-flex w-fit items-center gap-2 self-center rounded-full px-4 py-2 text-sm text-danger md:mt-auto md:self-start">
             <LogOut size={16} className="rtl:-scale-x-100" aria-hidden="true" /> {t('Sign out')}
           </button>
         </aside>
-        <section aria-labelledby="pf-h" className="min-w-0 max-w-[720px]">
+        <section aria-labelledby="pf-h" className={cn('min-w-0 max-w-[720px]', !phoneSection && 'max-md:hidden')}>
+          <Button size="sm" variant="outline" className="mb-4 md:hidden" iconStart={<ChevronLeft size={15} className="rtl:-scale-x-100" />} onClick={() => setPhoneSection(false)}>
+            {t('Back')}
+          </Button>
           <h2 id="pf-h" className="font-display text-display-md text-fg-strong">{t(S[tab][0])}</h2>
           <p className="mt-1 text-sm text-fg-muted">{t(S[tab][1])}</p>
           <div className="mt-6">
@@ -75,9 +85,6 @@ function Profile() {
             {tab === 'credit' && <CreditsTab />}
             {tab === 'sec' && <Security />}
           </div>
-          <Button variant="danger" className="mt-10 md:hidden" iconStart={<LogOut size={16} />} onClick={signOut}>
-            {t('Sign out')}
-          </Button>
         </section>
       </div>
     </PageShell>
@@ -111,7 +118,7 @@ function Info() {
     >
       <TextField label={t('Full name')} hideLabel placeholder={t('Full name')} icon={<UserIcon />} value={name} onChange={(e) => setName(e.target.value)} />
       <TextField label={t('Email address')} hideLabel placeholder={t('Email address')} type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-      <textarea aria-label={t('A short bio')} placeholder={t('A short bio')} dir="auto" value={bio} onChange={(e) => setBio(e.target.value)} className="glass h-28 resize-none rounded-[22px] px-[18px] py-3 text-md text-fg outline-none placeholder:text-fg-subtle focus:shadow-[0_0_0_3px_rgb(235_193_122/0.35)]" />
+      <textarea aria-label={t('A short bio')} placeholder={t('A short bio')} dir="auto" value={bio} onChange={(e) => setBio(e.target.value)} className="surface-field h-28 resize-none rounded-[16px] px-[18px] py-3 text-md text-fg outline-none placeholder:text-fg-subtle" />
       <div className="flex items-center gap-3">
         <Button type="submit" variant="gold" className="flex-1">
           {t('Save changes')}
@@ -267,8 +274,8 @@ function CreditsTab() {
           <TextField label={t('Name on card')} hideLabel placeholder={t('Name on card')} autoComplete="cc-name" value={card.name} onChange={(e) => setCard({ ...card, name: e.target.value })} />
           <TextField label={t('Card number')} hideLabel placeholder="1234 5678 9012 3456" inputMode="numeric" autoComplete="cc-number" value={card.number} onChange={(e) => setCard({ ...card, number: e.target.value })} />
           <div className="grid grid-cols-2 gap-2.5">
-            <TextField label={t('Expiry')} hideLabel placeholder="MM/YY" autoComplete="cc-exp" value={card.exp} onChange={(e) => setCard({ ...card, exp: e.target.value })} />
-            <TextField label="CVV" hideLabel placeholder="CVV" inputMode="numeric" autoComplete="cc-csc" value={card.cvv} onChange={(e) => setCard({ ...card, cvv: e.target.value })} />
+            <TextField label={t('Expiry')} hideLabel placeholder={t('MM/YY')} autoComplete="cc-exp" value={card.exp} onChange={(e) => setCard({ ...card, exp: e.target.value })} />
+            <TextField label={t('CVV')} hideLabel placeholder={t('CVV')} inputMode="numeric" autoComplete="cc-csc" value={card.cvv} onChange={(e) => setCard({ ...card, cvv: e.target.value })} />
           </div>
         </div>
         {err && (
