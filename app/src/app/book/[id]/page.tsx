@@ -2,7 +2,7 @@
 import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import { ArrowLeft, BookOpen, EyeOff } from 'lucide-react';
-import { Avatar, BookCover, Button, FavoriteButton, IconButton, Switch, Wordmark } from '@bayan/ui';
+import { Avatar, BookCover, Button, FavoriteButton, IconButton, Switch } from '@bayan/ui';
 import { api, type BookDetail, type ChatContext, type ChatSetup, type Suggestion } from '@/api';
 import { BOOK_BY_ID, GLOBAL } from '@/content';
 import { Backdrop } from '@/components/Backdrop';
@@ -166,10 +166,9 @@ function Chat({ book, firstQuestion, conversation, talk, fav, onToggleFav, t, p 
         className="max-lg:hidden"
         extra={spoiler}
         start={
-          <button type="button" onClick={() => router.push('/')} className="focus-ring inline-flex items-center gap-2 rounded-full pe-2 text-fg">
+          <button type="button" onClick={() => router.push('/')} className="focus-ring glass inline-flex h-chip items-center gap-1.5 rounded-full ps-2.5 pe-3.5 text-sm font-medium text-fg">
             <ArrowLeft size={16} className="rtl:-scale-x-100" aria-hidden="true" />
-            <Wordmark size={18} lang={lang} />
-            <span className="text-xs text-fg-muted">{t('Back')}</span>
+            <span>{t('Back')}</span>
           </button>
         }
       />

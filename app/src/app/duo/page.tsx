@@ -2,7 +2,7 @@
 import { Suspense, useMemo, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { ArrowLeft, ArrowRight, Check } from 'lucide-react';
-import { Avatar, BookCover, Button, Chip, TextField, Wordmark, cn } from '@bayan/ui';
+import { Avatar, BookCover, Button, Chip, TextField, cn } from '@bayan/ui';
 import { api, type Suggestion } from '@/api';
 import { BOOKS, BOOK_BY_ID, GLOBAL } from '@/content';
 import { Backdrop } from '@/components/Backdrop';
@@ -57,10 +57,9 @@ function Duo() {
   const header = (
     <SiteHeader
       start={
-        <button type="button" onClick={() => (started ? setStarted(false) : router.push('/'))} className="focus-ring inline-flex items-center gap-2 rounded-full pe-2 text-fg">
+        <button type="button" onClick={() => (started ? setStarted(false) : router.push('/'))} className="focus-ring glass inline-flex h-chip items-center gap-1.5 rounded-full ps-2.5 pe-3.5 text-sm font-medium text-fg">
           <ArrowLeft size={16} className="rtl:-scale-x-100" aria-hidden="true" />
-          <Wordmark size={18} lang={lang} className="max-sm:[&>span]:hidden" />
-          <span className="sr-only">{t('Back')}</span>
+          <span>{t('Back')}</span>
         </button>
       }
     />
